@@ -1,0 +1,67 @@
+\hypertarget{interfaceorg_1_1sbolstandard_1_1core_1_1_dna_sequence}{
+\section{DnaSequence Interface Reference}
+\label{interfaceorg_1_1sbolstandard_1_1core_1_1_dna_sequence}\index{org::sbolstandard::core::DnaSequence@{org::sbolstandard::core::DnaSequence}}
+}
+
+
+The SBOL data model's \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_dna_sequence}{DnaSequence}.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_dna_sequence_a5f6eb346ca8c0209f0ed1a02fe6dafe7}{getNucleotides} ()
+\begin{DoxyCompactList}\small\item\em The sequence of DNA base pairs which are described. \item\end{DoxyCompactList}\item 
+void \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_dna_sequence_aaff7577138c6378f339e51d6e142f153}{setNucleotides} (String nucleotides)
+\begin{DoxyCompactList}\small\item\em The sequence of DNA base pairs which are going to be described. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The SBOL data model's \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_dna_sequence}{DnaSequence}. DNA Sequence holds either the actual sequence string or a reference pointer, a URI to it. The SBOL data model is focused on the description of these DNA sequences as they used in assembly of new synthetic biological systems. Information specifying the exact base pair sequence of DNA components and Sequence Features is very important for the ability to replicate synthetic biology work. Both experimental work and theoretical sequence composition research heavily depends on this information. 
+
+Definition at line 14 of file DnaSequence.java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1sbolstandard_1_1core_1_1_dna_sequence_a5f6eb346ca8c0209f0ed1a02fe6dafe7}{
+\index{org::sbolstandard::core::DnaSequence@{org::sbolstandard::core::DnaSequence}!getNucleotides@{getNucleotides}}
+\index{getNucleotides@{getNucleotides}!org::sbolstandard::core::DnaSequence@{org::sbolstandard::core::DnaSequence}}
+\subsubsection[{getNucleotides}]{\setlength{\rightskip}{0pt plus 5cm}String getNucleotides (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{interfaceorg_1_1sbolstandard_1_1core_1_1_dna_sequence_a5f6eb346ca8c0209f0ed1a02fe6dafe7}
+
+
+The sequence of DNA base pairs which are described. 
+
+\begin{DoxyReturn}{Returns}
+a string representation of the DNA base-\/pair sequence 
+\end{DoxyReturn}
+\hypertarget{interfaceorg_1_1sbolstandard_1_1core_1_1_dna_sequence_aaff7577138c6378f339e51d6e142f153}{
+\index{org::sbolstandard::core::DnaSequence@{org::sbolstandard::core::DnaSequence}!setNucleotides@{setNucleotides}}
+\index{setNucleotides@{setNucleotides}!org::sbolstandard::core::DnaSequence@{org::sbolstandard::core::DnaSequence}}
+\subsubsection[{setNucleotides}]{\setlength{\rightskip}{0pt plus 5cm}void setNucleotides (
+\begin{DoxyParamCaption}
+\item[{String}]{nucleotides}
+\end{DoxyParamCaption}
+)}}
+\label{interfaceorg_1_1sbolstandard_1_1core_1_1_dna_sequence_aaff7577138c6378f339e51d6e142f153}
+
+
+The sequence of DNA base pairs which are going to be described. 
+
+a.The DNA sequence will use the IUPAC ambiguity recommendation. (See \href{http://www.genomatix.de/online_help/help/sequence_formats.html}{\tt http://www.genomatix.de/online\_\-help/help/sequence\_\-formats.html}) b.Blank lines, spaces, or other symbols must not be included in the sequence text. c.The sequence text must be in ASCII or UTF-\/8 encoding. For the alphabets used, the two are identical.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nucleotides} & a sequence of \mbox{[}a$|$c$|$t$|$g\mbox{]} letters \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this interface was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Users/mgaldzic/Documents/NetBeansProjects/libSBOLrdf/core/src/org/sbolstandard/core/DnaSequence.java\end{DoxyCompactItemize}

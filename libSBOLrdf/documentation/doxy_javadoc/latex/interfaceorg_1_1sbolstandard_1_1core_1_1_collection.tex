@@ -1,0 +1,195 @@
+\hypertarget{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{
+\section{Collection Interface Reference}
+\label{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}\index{org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}}
+}
+
+
+The SBOL data model's \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection} for RDF and Json.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+java.util.Collection$<$ \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_dna_component}{DnaComponent} $>$ \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_a4b2f1b2c12078e7937d26142f97f172d}{getComponents} ()
+\begin{DoxyCompactList}\small\item\em Elements that are intended as engineering components in synthetic biology. \item\end{DoxyCompactList}\item 
+void \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_a9ff983431034c861c97db6aeeecfa9c9}{addComponent} (\hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_dna_component}{DnaComponent} component)
+\begin{DoxyCompactList}\small\item\em Defined DNA segment for engineering biological systems, which belongs to this \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection}. \item\end{DoxyCompactList}\item 
+String \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_ac7feffb7a33f63504ff1f87f19e2d2d8}{getDescription} ()
+\begin{DoxyCompactList}\small\item\em Text which is for users to read and interpret what this \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection} is. \item\end{DoxyCompactList}\item 
+void \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_a1d15d718177c4f5411ce6ab339889fd4}{setDescription} (String description)
+\begin{DoxyCompactList}\small\item\em Text with an informative statement about the reason for grouping the \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection} members. \item\end{DoxyCompactList}\item 
+String \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_aefe76199cb4d0096f487b280c411d843}{getDisplayId} ()
+\begin{DoxyCompactList}\small\item\em Identifier to display to users. \item\end{DoxyCompactList}\item 
+void \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_a46b93a70e7bd612a7b429aac4829bc88}{setDisplayId} (String displayId)
+\begin{DoxyCompactList}\small\item\em Identifier to display to users. \item\end{DoxyCompactList}\item 
+String \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_a78ee178b6a73658d65ca60da4d1e6683}{getName} ()
+\begin{DoxyCompactList}\small\item\em Recognizable human identifier, it is often ambiguous. \item\end{DoxyCompactList}\item 
+void \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_ad737b36b74be994e0d8420797ed72f78}{setName} (String name)
+\begin{DoxyCompactList}\small\item\em Common name of \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection} should confer what is contained in the \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The SBOL data model's \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection} for RDF and Json. The objects of this type represent an organizational container which helps users and developers conceptualize a set of DNA components and SequenceFeatures as a group. Any combination of these objects can be added to a \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection}, annotated with a displayID, name and description and be shared on the web. Such collections could be a set of restriction enzyme recognition sites, such as the features commonly used for BBF RFC 10 BioBricks. A \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection} could contain all the DNA components used in a specific project, lab, or any custom grouping specified by the user. 
+
+Definition at line 19 of file Collection.java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_a9ff983431034c861c97db6aeeecfa9c9}{
+\index{org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}!addComponent@{addComponent}}
+\index{addComponent@{addComponent}!org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}}
+\subsubsection[{addComponent}]{\setlength{\rightskip}{0pt plus 5cm}void addComponent (
+\begin{DoxyParamCaption}
+\item[{{\bf DnaComponent}}]{component}
+\end{DoxyParamCaption}
+)}}
+\label{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_a9ff983431034c861c97db6aeeecfa9c9}
+
+
+Defined DNA segment for engineering biological systems, which belongs to this \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection}. 
+
+Any one of the following, standard biological parts, BioBricks, oligo components, vector plasmids, genomes, or any other DNA segment of interest as a building block of biological systems.
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & a {\ttfamily \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_dna_component}{DnaComponent}} that should be a member of this collection \\
+\hline
+\end{DoxyParams}
+\hypertarget{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_a4b2f1b2c12078e7937d26142f97f172d}{
+\index{org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}!getComponents@{getComponents}}
+\index{getComponents@{getComponents}!org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}}
+\subsubsection[{getComponents}]{\setlength{\rightskip}{0pt plus 5cm}java.util.Collection$<${\bf DnaComponent}$>$ getComponents (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_a4b2f1b2c12078e7937d26142f97f172d}
+
+
+Elements that are intended as engineering components in synthetic biology. 
+
+For example, standard biological parts, BioBricks, oligo components, vector plasmids, genomes, or any other DNA segment of interest as a building block of biological systems.
+
+\begin{DoxyReturn}{Returns}
+0 or more {\ttfamily \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_dna_component}{DnaComponent}}\mbox{[}s\mbox{]} that are in this \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection} 
+\end{DoxyReturn}
+\hypertarget{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_ac7feffb7a33f63504ff1f87f19e2d2d8}{
+\index{org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}}
+\subsubsection[{getDescription}]{\setlength{\rightskip}{0pt plus 5cm}String getDescription (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_ac7feffb7a33f63504ff1f87f19e2d2d8}
+
+
+Text which is for users to read and interpret what this \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection} is. 
+
+(eg \char`\"{}Collecting parts which could be used to build honey production directly into
+ mouse-\/ear cress\char`\"{}; \char`\"{}T9002 and I7101 variants from Sleight 2010, designs aim to
+ improve stability over evolutionary time\char`\"{}; \char`\"{}features useful when working with
+ BBF RFC 10\char`\"{}; \char`\"{}Totally sick Parts I found browsing the web -\/-\/ SBOL rules
+ -\/-\/ organize these later\char`\"{}).
+
+Informative description which allows human users to interpret the likely members of this \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection}. \begin{DoxyReturn}{Returns}
+Human readable text describing the \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection} 
+\end{DoxyReturn}
+\hypertarget{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_aefe76199cb4d0096f487b280c411d843}{
+\index{org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}!getDisplayId@{getDisplayId}}
+\index{getDisplayId@{getDisplayId}!org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}}
+\subsubsection[{getDisplayId}]{\setlength{\rightskip}{0pt plus 5cm}String getDisplayId (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_aefe76199cb4d0096f487b280c411d843}
+
+
+Identifier to display to users. 
+
+\begin{DoxyReturn}{Returns}
+a human readable identifier 
+\end{DoxyReturn}
+\hypertarget{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_a78ee178b6a73658d65ca60da4d1e6683}{
+\index{org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}!getName@{getName}}
+\index{getName@{getName}!org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}}
+\subsubsection[{getName}]{\setlength{\rightskip}{0pt plus 5cm}String getName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_a78ee178b6a73658d65ca60da4d1e6683}
+
+
+Recognizable human identifier, it is often ambiguous. 
+
+(eg. Mike's Arabidopsis Project A; Sleight, et al. (2010) J.Bioeng; BBF RFC 10 features; Bookmarked Parts). \begin{DoxyReturn}{Returns}
+its name, commonly used to refer to this \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection} 
+\end{DoxyReturn}
+\hypertarget{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_a1d15d718177c4f5411ce6ab339889fd4}{
+\index{org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}}
+\subsubsection[{setDescription}]{\setlength{\rightskip}{0pt plus 5cm}void setDescription (
+\begin{DoxyParamCaption}
+\item[{String}]{description}
+\end{DoxyParamCaption}
+)}}
+\label{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_a1d15d718177c4f5411ce6ab339889fd4}
+
+
+Text with an informative statement about the reason for grouping the \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection} members. 
+
+(eg \char`\"{}Collecting parts which could be used to build honey production directly into
+ mouse-\/ear cress\char`\"{}; \char`\"{}T9002 and I7101 variants from Sleight 2010, designs aim to
+ improve stability over evolutionary time\char`\"{}; \char`\"{}features useful when working with
+ BBF RFC 10\char`\"{}; \char`\"{}Totally sick Parts I found browsing the web -\/-\/ SBOL rules
+ -\/-\/ organize these later\char`\"{}).
+
+
+\begin{DoxyParams}{Parameters}
+{\em description} & Human readable text describing the \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection} \\
+\hline
+\end{DoxyParams}
+\hypertarget{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_a46b93a70e7bd612a7b429aac4829bc88}{
+\index{org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}!setDisplayId@{setDisplayId}}
+\index{setDisplayId@{setDisplayId}!org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}}
+\subsubsection[{setDisplayId}]{\setlength{\rightskip}{0pt plus 5cm}void setDisplayId (
+\begin{DoxyParamCaption}
+\item[{String}]{displayId}
+\end{DoxyParamCaption}
+)}}
+\label{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_a46b93a70e7bd612a7b429aac4829bc88}
+
+
+Identifier to display to users. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em displayId} & a human readable identifier \\
+\hline
+\end{DoxyParams}
+\hypertarget{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_ad737b36b74be994e0d8420797ed72f78}{
+\index{org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}!setName@{setName}}
+\index{setName@{setName}!org::sbolstandard::core::Collection@{org::sbolstandard::core::Collection}}
+\subsubsection[{setName}]{\setlength{\rightskip}{0pt plus 5cm}void setName (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}
+\label{interfaceorg_1_1sbolstandard_1_1core_1_1_collection_ad737b36b74be994e0d8420797ed72f78}
+
+
+Common name of \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection} should confer what is contained in the \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection}. 
+
+(eg. Mike's Arabidopsis Project A; Sleight, et al. (2010) J.Bioeng; BBF RFC 10 features; Bookmarked Parts). 
+\begin{DoxyParams}{Parameters}
+{\em name} & commonly used to refer to this \hyperlink{interfaceorg_1_1sbolstandard_1_1core_1_1_collection}{Collection} (eg. Project A) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this interface was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Users/mgaldzic/Documents/NetBeansProjects/libSBOLrdf/core/src/org/sbolstandard/core/Collection.java\end{DoxyCompactItemize}

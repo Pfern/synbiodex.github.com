@@ -1,16 +1,25 @@
 Documenation for the synbiodex projects
 
-Howto: make docs and publish them on synbiodex.github.com
+Howto: Make docs and publish them on synbiodex.github.com
 
 Inside your repo setup:
 
-docs/doxy_config
+copy docs/ dir from libSBOLrdf
+
+Use doxy_wizard to generate docs from sources
+docs/doxy_config/config.Doxyfile
 set the source: src
 set the destination: build/documentation/doxy_javadoc
+edit the project specific stuff
 
-hit run
+docs/pages contains the static files for doxy docs - tutorial, main page, etc
+
+
+
+click RUN
 
 In synbiodex.github.com repo
+
 edit the root index.html add your project info
 
 make a dir for you project
