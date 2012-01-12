@@ -1,0 +1,40 @@
+Goal Request new RFC# at 1.1.0
+
+UML diagram (Figure 5)
+v1.0.0 to v1.0.3
+Removed "s" from "subComponents", the property is now "subComponent"
+Changed datatype of "bioStart" from "int()" to "positiveInteger"
+Changed datatype of "bioEnd" from "int()" to "positiveInteger"
+v1.0.3 to v1.0.8 - todo
+sync UML diagram versions with document
+
+Specification document - todo
+v1.0.2 to 1.0.8
+pg 3 Table of Contents updated
+pg 9 remove "rp" from SAnull and replace relative position (terminal SA) with position unspecified in Abbreviation key
+pg 9 Add section # 8.2.1 to SBOL versions and releases
+pg 11 Figure 5 updated to v1.0.2 "subComponents" changed to "subComponent".
+pg 11 Figure 5 updated to v1.0.8 change bioStart and bioEnd datatype "int()" to "positiveInteger()"
+pg 11 Firgure 5 add current version # (v1.1.0) to diagram, keep the spec synced w/ UML diagram. 
+pg 13 remove "for" in DC.name last sent. "and meaniglful, for as may be done" to "and meaningful, as may be done"
+pg 13 DC.type replace "or provisional SBOL:Vocabulary extensions" with "(see Appendix for commonly used terms)"
+pg 13 DC.type replace ", please contact the SBOL Editors (see section 11 for contact information)" with "(use "Request a Term" http://sequenceontology.org)"
+pg 15 move SA.uri to required Data Property section
+pg 15 change SA.bioStart xsd:integer to xsd:positiveInteger
+pg 15 change SA.bioEnd xsd:integer to xsd:positiveInteger
+pg 16 remove wording in SA.precedes "Finally, a null value for a precedes property indicates the terminal SequenceAnnotation within a given DnaComponent. Absence of the precedes relation indicates this knowledge is not known."
+
+pg 16 change "... sa1.bioEnd is strictly less than sa2.bioStart" to "...sa1.bioEnd is strictly greater than sa2.bioStart"
+pg 19 Figure 7.b add "strand: +" to SequenceAnnotations
+pg 20 change "subcomposition" to "composition"
+pg 20 remove "two" from "in the two top DnaComponents"
+pg 22 change "SBOL version 1.0.0" to "SBOL version 1.1.0"
+
+
+
+Done
+v1.0.0 to 1.0.3
+pg 1 added authors Josh Natarajan, Carlos Olguin
+pg 2 Nicholas Roehner's affiliation changed to Bioengineering
+pg 19 Figure 7b "subComponents" changed to "subComponent".
+
