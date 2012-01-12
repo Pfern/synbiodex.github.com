@@ -8,7 +8,12 @@ Changed datatype of "bioEnd" from "int()" to "positiveInteger"
 v1.0.3 to v1.0.8 - todo
 sync UML diagram versions with document
 
-Specification document - todo
+Specification document
+v1.0.8 to v1.0.9
+fix URI's in appendix
+fix page breaks
+
+done
 v1.0.2 to 1.0.8
 pg 3 Table of Contents updated
 pg 9 remove "rp" from SAnull and replace relative position (terminal SA) with position unspecified in Abbreviation key
@@ -19,7 +24,6 @@ pg 11 Firgure 5 add current version # (v1.1.0) to diagram, keep the spec synced 
 pg 13 remove "for" in DC.name last sent. "and meaniglful, for as may be done" to "and meaningful, as may be done"
 pg 13 DC.type replace "or provisional SBOL:Vocabulary extensions" with "(see Appendix for commonly used terms)"
 pg 13 DC.type replace ", please contact the SBOL Editors (see section 11 for contact information)" with "(use "Request a Term" http://sequenceontology.org)"
-pg 15 move SA.uri to required Data Property section
 pg 15 change SA.bioStart xsd:integer to xsd:positiveInteger
 pg 15 change SA.bioEnd xsd:integer to xsd:positiveInteger
 pg 16 remove wording in SA.precedes "Finally, a null value for a precedes property indicates the terminal SequenceAnnotation within a given DnaComponent. Absence of the precedes relation indicates this knowledge is not known."
@@ -30,11 +34,9 @@ pg 20 change "subcomposition" to "composition"
 pg 20 remove "two" from "in the two top DnaComponents"
 pg 22 change "SBOL version 1.0.0" to "SBOL version 1.1.0"
 
-
-
-Done
 v1.0.0 to 1.0.3
 pg 1 added authors Josh Natarajan, Carlos Olguin
 pg 2 Nicholas Roehner's affiliation changed to Bioengineering
+pg 15 move SA.uri to required Data Property section
 pg 19 Figure 7b "subComponents" changed to "subComponent".
 
