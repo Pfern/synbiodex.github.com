@@ -1,17 +1,20 @@
-Goal Request new RFC# at 1.1.0
+Requested new RFC# targeted at 1.1.0
 
 UML diagram (Figure 5)
 v1.0.0 to v1.0.3
 Removed "s" from "subComponents", the property is now "subComponent"
 Changed datatype of "bioStart" from "int()" to "positiveInteger"
 Changed datatype of "bioEnd" from "int()" to "positiveInteger"
-v1.0.3 to v1.0.8 - todo
+v1.0.3 to v1.0.8
 sync UML diagram versions with document
 
 Specification document
 v1.0.8 to v1.0.9
-fix URI's in appendix
-fix page breaks
+Fixed appendix: SO URI's to use "purl" namespace
+Fixed appendix: removed non-SO examples
+Fixed appendix: removed sub-sections - Appendix is now just "examples" of SO
+Fixed page breaks
+Fixed other formatting
 
 done
 v1.0.2 to 1.0.8
