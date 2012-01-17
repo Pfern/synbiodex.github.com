@@ -1,3 +1,27 @@
-1.0.3
-1. Figure 7b "subComponents" changed to "subComponent".
-2. Figure 5 "subComponents" changed to "subComponent".
+1.0.9 to 1.1.0
+Proposed by Mike
+The strand issue
+pg 15,16 main section with language re: SA.strand
+- The specification uses the word "direction" throughout when discussing strand of the subComponent(DC). Possibly better language would use the word orientation.
+- The [+/-] should be replaced with [+/-/.] (in def SA and UML fig 5)
+SA 
+currently says:
+The direction of the subComponent is specified by the strand [+/-]. Sequences used are assumed, by convention, to be specified 5' to 3', therefore the + strand is 5' to 3' and the - strand is 3' to 5'."
+change this
+
+- The definition of SA.subComponent refers to "subsequence" 
+if the rc(dc.seq.ds.nuc) is approved
+This will ne to be clarified for each 3 of the strand cases.
+SA+.subComponent.dc.seq.ds.nuc will be subsequence
+SA-.subCmponent.dc.seq.ds.nuc will be rc(subsequence)
+SA..subComponent.dc.seq.ds.nuc will be subsequence
+
+SA.strand
+Currently says:
+"Strand orientation + or - of the subComponent relative to the DNA sequence of the DnaComponent being annotated. DnaSequence is by convention assumed 5' to 3', therefore the "+" strand is 5' to 3' and the "-" strand is 3' to 5'."
+
+change this
+
+Add an example or change one of the current ones to one with a - strand.
+
+
