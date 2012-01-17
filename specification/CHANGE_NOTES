@@ -9,6 +9,15 @@ v1.0.3 to v1.0.8
 sync UML diagram versions with document
 
 Specification document
+v1.0.9 to v1.0.10
+pg 10 Clarrified Version policy
+"Major versions (X) ... the submission of the specification document.. (BBF RFC)" added "is REQUIRED".
+"Minor versions (Y)" added "The submission of the specification document to ... (BBF RFC) is OPTIONAL." 
+"Patch versions (Z)" added "The submission of the specification document to the BioBrick Foundation as a Request For Comment (BBF RFC) is NOT RECOMMENDED."
+Changed any mentions of v1.0.0 which needed to be updated to v1.1.0
+pg 1 changed RFC# from 84 to 87; 87 replaces 84
+
+
 v1.0.8 to v1.0.9
 Fixed appendix: SO URI's to use "purl" namespace
 Fixed appendix: removed non-SO examples
@@ -16,7 +25,6 @@ Fixed appendix: removed sub-sections - Appendix is now just "examples" of SO
 Fixed page breaks
 Fixed other formatting
 
-done
 v1.0.2 to 1.0.8
 pg 3 Table of Contents updated
 pg 9 remove "rp" from SAnull and replace relative position (terminal SA) with position unspecified in Abbreviation key
