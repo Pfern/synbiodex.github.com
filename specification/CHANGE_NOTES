@@ -16,6 +16,7 @@ pg 10 Clarrified Version policy
 "Patch versions (Z)" added "The submission of the specification document to the BioBrick Foundation as a Request For Comment (BBF RFC) is NOT RECOMMENDED."
 Changed any mentions of v1.0.0 which needed to be updated to v1.1.0
 pg 1 changed RFC# from 84 to 87; 87 replaces 84
+pg 15 added table of nucleotide ambiguity codes to defintion of DnaSequence.
 
 
 v1.0.8 to v1.0.9
