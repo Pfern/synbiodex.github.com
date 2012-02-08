@@ -1,26 +1,63 @@
 1.0.11 to 1.1.0
 Proposed by Mike
-The strand issue
-pg 15,16 main section with language re: SA.strand
-- The specification uses the word "direction" throughout when discussing strand of the subComponent(DC). Possibly better language would use the word orientation.
-- The [+/-] should be replaced with [+/-/.] (in def SA and UML fig 5)
-SA 
-currently says:
-The direction of the subComponent is specified by the strand [+/-]. Sequences used are assumed, by convention, to be specified 5' to 3', therefore the + strand is 5' to 3' and the - strand is 3' to 5'."
-change this
 
-- The definition of SA.subComponent refers to "subsequence" 
-if the rc(dc.seq.ds.nuc) is approved
-This will ne to be clarified for each 3 of the strand cases.
-SA+.subComponent.dc.seq.ds.nuc will be subsequence
-SA-.subCmponent.dc.seq.ds.nuc will be rc(subsequence)
-SA..subComponent.dc.seq.ds.nuc will be subsequence
+The proposal is to:
 
-SA.strand
-Currently says:
-"Strand orientation + or - of the subComponent relative to the DNA sequence of the DnaComponent being annotated. DnaSequence is by convention assumed 5' to 3', therefore the "+" strand is 5' to 3' and the "-" strand is 3' to 5'."
+    Strengthen sa.strand definition as referring to the sequence between parent and subComponent DC
+    Add soft language to DnaComponent in terms of transcriptional direction
+    Given this definition we do not need a strand value for both directions or neither direction.
 
-change this
+ 
+
+SequenceAnnotation class definition would say
+
+    "Individual instances of the SequenceAnnotation class specify a relationship of the subComponent (DnaComponent) to the DnaComponent being annotated, its 'parent' DnaComponent. This relationship is the position and strand orientation of the subComponent. The SequenceAnnotation location CAN be specified by the bioStart and bioEnd positions of the subComponent, along with the DNA sequence. Alternatively, the partial order of SequenceAnnotations along a DnaComponent can be specified by indicating the precedes relationship to other SequenceAnnotations. As a convention, numerical coordinates in this class use position 1 (not 0) to indicate the initial base pair of a DNA sequence. This convention is followed by the broader Molecular Biology community, especially in the relevant literature. The strand orientation, or direction, of the subComponent's sequence relative to the parent DnaComponent is specified by the strand [+/-]. For strand: '+' the sequence of the subComponent is the exact sub-sequence, and for '-' it is the reverse-complement of the parent DnaComponent's sequence in that region"
+
+ 
+
+SA.strand would say:
+
+    "Zero or one value of type xsd:string. Strand orientation '+' or '-' is a 'subComponent relative orientation' flag.  For a ful explanation see Logical consistency of the subComponent’s DnaSequence value,  below.
+
+ 
+
+SA.subComponent would say:
+
+    One and only one value of type DnaComponent. This property specifies the DnaComponent which is being annotated on the DnaComponent’s sequence. Analogous to 'a feature' in other systems, the DnaComponent value serves to indicate information about the sequence at the position specified by the SequenceAnnotation’s location data properties or the relative position object property. The sequence of the DnaComponent specified by the subComponent property MUST be logically consistent with the strand value.
+
+ 
+
+Logical consistency of the subComponent’s DnaSequence value would say:
+
+    If present, the DnaSequence value of the DnaComponent referenced by subComponent in a SequenceAnnotation with Location Data MUST relate to the exact sequence found in the interval specified by the Location Data. 
+
+    The subComponent's sequence is logically consistent if the value of strand is:
+
+    '+' and the subComponent's sequence specifies the sequence of the parent DnaComponent in that region. 
+
+    '-' and the subComponent's sequence specifies the reverse-complement of the parent DnaComponent's sequence in that region.
+
+    If the strand value is not specified, the sequence of the subComponent is present, it SHOULD be interpreted that the subComponent's sequence specifies the exact sub-sequence of the parent DnaComponent.
+
+ 
+
+DnaComponent class definition, add
+
+ 
+
+    To reduce ambiguity when defining DnaComponents which have a transcriptional direction, such as a CDS, promoter, terminator, etc. the forward orientation convention is RECOMMENDED. The DnaComponent's sequence SHOULD be specified in the direction transcription is expected to proceed.  Then, incorporating this DnaComponent as a subComponent in a design, in either the forward or reverse direction, will allow the interpretation of the strand value to be consistent with transcription. Such an interpretation is commonly used when designing a new synthetic biological construct. Use of "lowest" level convention based on genomic orientation, ie the origin of the DnaComponent is NOT RECOMENDED.  In some cases, it MAY be beneficial to define two different DnaComponents, one with each orientation.  For example, one oriented to match assembly plans and one for functional design, which matches the transcriptional direction.
+
+ 
+
+Specific changes would be made to
+
+    8.5.1 DC
+
+    8.5.3 SA
+    The document uses the word "direction" throughout when discussing strand of the subComponent(DC). Change this to "strand orientation". 
+
+    Add a proposal for >v1.1 to add a DC.direction (transcriptional, genomic, assembly)?
+
 
 Add an example or change one of the current ones to one with a - strand.
 

@@ -1,4 +1,4 @@
-*Requested new RFC# targeted at 1.1.0*
+*new RFC# 87 targeted at 1.1.0*
 
 UML diagram (Figure 5)
 ======================
@@ -11,6 +11,10 @@ sync UML diagram versions with document
 
 Specification document
 ======================
+
+v1.0.11 to v 1.0.12
+- 
+
 v1.0.10 to v1.0.11
 - formatting/page numbers have changed
 - from Mandy's comments
