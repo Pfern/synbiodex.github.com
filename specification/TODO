@@ -1,4 +1,4 @@
-1.0.9 to 1.1.0
+1.0.11 to 1.1.0
 Proposed by Mike
 The strand issue
 pg 15,16 main section with language re: SA.strand
@@ -23,27 +23,4 @@ Currently says:
 change this
 
 Add an example or change one of the current ones to one with a - strand.
-
-
-From Mandy:
-p. 5 "As software tools are adapt to progress ..." should be "As software tools are adapted to progress ..."
-p. 6 "For example, DNA components can be hypothesized to have a biological function, deemed necessary for DNA assembly processes, or serve the synthetic biologist as landmarks in analysis."  Verbs should be consistent, maybe better: "For example, DNA components can be hypothesized to have a biological function deemed necessary for DNA assembly processes; they may also serve the synthetic biologist as landmarks in analysis."
-
-p 9 (Top) "SBOL version 1.0, focuses on the representation of DNA components as the SBOL:Core:model." (Shouldn't this be SBOL version 1.0.0 or 1.1.0?) "SBOL:Vocabulary defines the key terms used in the core model." Didn't we get rid of the SBOL Vocabulary?  I guess you talk later about some of the terminology (ie, DnaComponent) being part of the SBOL:Vocabulary, but I wonder if that will be confusing since there is also going to be an SBOL:Vocabulary extension (which you also refer to in this document.)  You also have a section in this document called SBOL Vocabulary (8.3) -- I'm just wondering if we are overusing this.
-
-p.9 You identify a couple of provisional terms that we are going to ask the Sequence Ontology folks to add (Gene Expression and DNA Construction, and you refer the reader to a list of provisional terms in the Appendix.  The list in the appendix would appear to be examples of actual Sequence Ontology terms, not provisional ones (the two you name on page 9 are not in there, for example.)
-
-p 9 "start with lower cases letters and follow lower camelCase."  Probably it is sufficient to say "lower camelCase", because by definition a lower camelCase term starts with a lower-case letter, but if you want to include the additional clarification, it should be "start with lower-case letters".
-
-p.20 SequenceAnnotation.strand elements are missing colons, ie
-
-strand +
-
-instead of
-
-strand: +
-
-This is inconsistent w/p.19
-
-p.23 Cesar's email address is no longer valid -- should use cesarr@me.com, unless there is another email address he would prefer to have used.
 
