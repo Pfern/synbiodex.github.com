@@ -13,7 +13,35 @@ Specification document
 ======================
 
 v1.0.11 to v 1.0.12
-- 
+- Revert "... sa1.bioEnd is strictly less than sa2.bioStart" to "...sa1.bioEnd is strictly greater than sa2.bioStart"; "... sa1.bioEnd is strictly less than sa2.bioStart" was correct in v1.0.2
+- Added: "Logical consistency of Location Data
+Given sa1:SequenceAnnotation, sa1.bioStart and sa1.bioEnd are logically consistent if: sa1.bioStart is greater or equal to 1 (positive integer); and
+sa1.bioEnd is greater or equal to sa1.bioStart; and 
+the DNA sequence length of the DnaComponent specified by sa1.subcomponent is equal to sa1.bioEnd - sa1.bioStart + 1." this requirement was passed by vote VaTech 2011, and had been missing in the specification text, thanks to Swapnil Bhatia for noticing this omission.
+- Throughout the text the word "direction" was used when discussing strand of the subComponent(DC). Changed this to "strand orientation". 
+
+- Section 8.5.3 changes 
+- SA class defintion now reads:
+"Individual instances of the SequenceAnnotation class specify a relationship of the subComponent (DnaComponent) to the DnaComponent being annotated, its 'parent' DnaComponent. This relationship is the position and strand orientation of the subComponent relative to the parent DnaComponent orientation. The SequenceAnnotation location CAN be specified by the bioStart and bioEnd positions of the subComponent, along with the DNA sequence. Alternatively, the partial order of SequenceAnnotations along a DnaComponent can be specified by indicating the precedes relationship to other SequenceAnnotations. As a convention, numerical coordinates in this class use position 1 (not 0) to indicate the initial base pair of a DNA sequence. This convention is followed by the broader Molecular Biology community, especially in the relevant literature. The strand orientation, or direction, of the subComponent's sequence relative to the parent DnaComponent is specified by the strand [+/-]. For strand: '+' the sequence of the subComponent is the exact sub-sequence, and for '-' it is the reverse-complement of the parent DnaComponent's sequence in that region.
+
+A SequenceAnnotation instance MUST specify a subComponent of type DnaComponent. SequenceAnnotations MUST belong to exactly 1 DnaComponent."
+
+- SA.strand now says:
+	- "Zero or one value of type xsd:string. Strand orientation '+' or '-' is a 'subComponent relative to the parent DnaComponent orientation' flag.  For a full explanation see Logical consistency of the subComponent’s DnaSequence value.
+- SA.subComponent now says:
+	- One and only one value of type DnaComponent. This property specifies the DnaComponent which is being annotated on the parent DnaComponent’s sequence. Analogous to 'a feature' in other systems, the DnaComponent value serves to indicate information about the sequence at the position specified by the SequenceAnnotation’s location data properties or the relative position object property. The sequence of the DnaComponent specified by the subComponent property MUST be logically consistent with the strand value.
+
+- Logical consistency of the subComponent’s DnaSequence value now says:
+When present, the subComponent’s DnaSequence MUST relate to the exact sequence found in the interval specified by the Location Data of the SequenceAnnotation.
+The subComponent's sequence is logically consistent if the value of strand is: 
+'+' and the subComponent's sequence specifies the sequence of the parent DnaComponent in that region.
+'-' and the subComponent's sequence specifies the reverse-complement of the parent DnaComponent's sequence in that region.
+If the strand value is un-specified and the DnaSequence of the subComponent is present, the subComponent's sequence specifies the exact sub-sequence of the parent DnaComponent.
+
+- Removed the reference to precedes='null' in "Well-formed constraint: Relative Position"
+Section 9
+Added Section 9.4 Example "DnaSequence of subComponent on the minus strand" Figure 10
+
 
 v1.0.10 to v1.0.11
 - formatting/page numbers have changed
@@ -24,7 +52,9 @@ now reads:
 "For example, DNA components can be hypothesized to have a biological function, be deemed necessary for DNA assembly processes, or have served as landmarks in analysis."
 - p 9 (Top) "SBOL version 1.0, focuses on the representation of DNA components as the SBOL:Core:model." (Shouldn't this be SBOL version 1.0.0 or 1.1.0?) corrected to 1.1.0
 
-- Mnady: "SBOL:Vocabulary defines the key terms used in the core model." Didn't we get rid of the SBOL Vocabulary?  I guess you talk later about some of the terminology (ie, DnaComponent) being part of the SBOL:Vocabulary, but I wonder if that will be confusing since there is also going to be an SBOL:Vocabulary extension (which you also refer to in this document.)  You also have a section in this document called SBOL Vocabulary (8.3) -- I'm just wondering if we are overusing this.
+- Corrected wording in SBOL Vocabulary and Appendix to remove statements about an SBOL Editor maintained vocabulary, a proposal that rejected by vote. The revisions are based on the following comments from Mandy:
+
+- Mandy: "SBOL:Vocabulary defines the key terms used in the core model." Didn't we get rid of the SBOL Vocabulary?  I guess you talk later about some of the terminology (ie, DnaComponent) being part of the SBOL:Vocabulary, but I wonder if that will be confusing since there is also going to be an SBOL:Vocabulary extension (which you also refer to in this document.)  You also have a section in this document called SBOL Vocabulary (8.3) -- I'm just wondering if we are overusing this.
 You identify a couple of provisional terms that we are going to ask the Sequence Ontology folks to add (Gene Expression and DNA Construction, and you refer the reader to a list of provisional terms in the Appendix.  The list in the appendix would appear to be examples of actual Sequence Ontology terms, not provisional ones (the two you name on page 9 are not in there, for example.)
 Mike: removed the references to extensions, but I kept "SBOL:Vocabulary" which are terms specific to SBOL, with no overlap with SO. 
 Section 8.3 is the vocabulary used to define Core classes.
