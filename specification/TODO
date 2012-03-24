@@ -1,4 +1,4 @@
-1.0.12 to 1.1.0
- ratification vote 
-
+v1.1.0
+section 8.5.2 DnaSequence 
+ADD - "the DNA sequence MUST BE lower-case". It's implicit in that it lists the legal chars, but as case is often not significant (or not enforced), it would be more explicit to make this clear.
 
