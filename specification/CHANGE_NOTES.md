@@ -1,4 +1,15 @@
-*new RFC# 87 targeted at 1.1.0*
+*new revisions*
+
+Specification document
+======================
+v1.1.0 to v1.1.1
+**section 8.5.2 DnaSequence**
+Moved "the DNA sequence MUST BE lower-case" to the a/b/c list of restrictions. That way this restriction would not be lost in the text:
+new b. as: "b. the DNA sequence MUST use exclusively lowercase characters"
+
+
+
+*BBF RFC# 87 is v1.1.0*
 
 UML diagram (Figure 5)
 ======================
